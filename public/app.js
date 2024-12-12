@@ -1,11 +1,15 @@
 let currentPuzzleId = 0;  // Store current puzzle ID
 const userId = 'user123';  // Hardcoded user ID for now
 
+// Check if the app is running locally or on production
+const isLocal = window.location.hostname === 'localhost';  // Detect if running locally
+const backendUrl = isLocal ? 'http://localhost:3000' : 'https://puzzlequestclassproject.azurewebsites.net';  // Local or live backend URL
+
 // Initialize app with first puzzle
 document.getElementById('get-puzzles-btn').addEventListener('click', fetchNextPuzzle);
 
 function fetchNextPuzzle() {
-    fetch('https://puzzlequestclassproject.azurewebsites.net/api/next-puzzle/' + userId)  // Update to your backend URL
+    fetch(`${backendUrl}/api/next-puzzle/${userId}`)  // Use dynamic URL for local or live
         .then(response => response.json())
         .then(data => {
             if (data.message) {
@@ -58,7 +62,7 @@ function displayPuzzle(puzzle) {
         event.preventDefault();
         const answer = input.value.trim();
 
-        fetch('https://puzzlequestclassproject.azurewebsites.net/api/submit-answer', {  // Update to backend URL
+        fetch(`${backendUrl}/api/submit-answer`, {  // Use dynamic URL for local or live
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId, puzzleId: puzzle.id, answer })

@@ -3,12 +3,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({
-    origin: 'https://mango-glacier-02caee610.4.azurestaticapps.net',  // Allow frontend's domain
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type'],
-}));
-
+app.use(cors());
 app.use(express.static('public'));
 
 const puzzles = [
