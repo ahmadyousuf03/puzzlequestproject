@@ -5,7 +5,7 @@ const userId = 'user123';  // Hardcoded user ID for now
 document.getElementById('get-puzzles-btn').addEventListener('click', fetchNextPuzzle);
 
 function fetchNextPuzzle() {
-    fetch(`/api/next-puzzle/${userId}`)
+    fetch('https://puzzlequestclassproject.azurewebsites.net/api/next-puzzle/' + userId)  // Update to your backend URL
         .then(response => response.json())
         .then(data => {
             if (data.message) {
@@ -58,7 +58,7 @@ function displayPuzzle(puzzle) {
         event.preventDefault();
         const answer = input.value.trim();
 
-        fetch('/api/submit-answer', {
+        fetch('https://puzzlequestclassproject.azurewebsites.net/api/submit-answer', {  // Update to backend URL
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId, puzzleId: puzzle.id, answer })
