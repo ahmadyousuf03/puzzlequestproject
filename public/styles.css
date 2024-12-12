@@ -1,0 +1,130 @@
+/* Global Styles */
+body {
+    background-color: #1A1A2E; /* Dark Navy Background */
+    color: #E1E1E6; /* Soft White Text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Header Styling */
+h1 {
+    color: #00B5B8; /* Subtle Light Teal */
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+    background-color: #007BFF; /* Navy Blue Button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #0056B3; /* Darker Navy Blue on Hover */
+}
+
+/* Puzzle List Container */
+#puzzles-list {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #222A3D; /* Slightly Lighter Navy */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Individual Puzzle Styling */
+.puzzle {
+    background-color: #2A3D52; /* Lighter Navy for Each Puzzle */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Puzzle Question */
+.puzzle h2 {
+    color: #00B5B8; /* Subtle Light Teal for Puzzle Titles */
+    font-size: 1.4rem;
+}
+
+/* Input Fields for Answer */
+input[type="text"] {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #3E4B61; /* Darker input fields */
+    border: none;
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Submit Button for Answer */
+input[type="submit"] {
+    background-color: #00B5B8; /* Light Teal Submit Button */
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit Button Hover Effect */
+input[type="submit"]:hover {
+    background-color: #009CBB; /* Darker Light Blue */
+}
+
+/* Hint Button Styling */
+.hint-btn {
+    background-color: #00B5B8; /* Light Teal for hint button */
+    color: #2A3D52; /* Navy Text */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hint Button Hover Effect */
+.hint-btn:hover {
+    background-color: #009CBB; /* Darker Light Blue Hint Button */
+}
+
+/* Success/Error Messages */
+.success-message {
+    color: #4CAF50; /* Green for Success */
+}
+
+.error-message {
+    color: #F44336; /* Red for Errors */
+}
+
+/* Progress Bar */
+#progress {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #00B5B8; /* Light Teal Progress Text */
+}
